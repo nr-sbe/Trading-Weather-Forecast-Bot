@@ -1,7 +1,7 @@
 name: Daily Weather Forecast
 on:
   schedule:
-    - cron:  "0 13 * * *"   # runs daily at 13:00 UTC (9:00 AM Eastern Time)
+    - cron:  "34 15 * * *"   # runs daily at 13:00 UTC (9:00 AM Eastern Time)
 jobs:
   post-forecast:
     runs-on: ubuntu-latest
