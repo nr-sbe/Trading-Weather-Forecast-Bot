@@ -2,8 +2,8 @@ name: Daily Weather Forecast
 
 on:
   schedule:
-    - cron: '…'
-  workflow_dispatch:    # add this line
+    - cron: "38 15 * * *"   # runs daily at 15:38 UTC
+  workflow_dispatch:        # allows manual runs from the Actions tab
 
 jobs:
   post-forecast:
@@ -12,11 +12,14 @@ jobs:
       PA_WEBHOOK_URL: ${{ secrets.PA_WEBHOOK_URL }}
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+
       - name: Install Dependencies
         run: pip install requests
+
       - name: Run Weather Forecast Script
         run: python weather_bot.py
