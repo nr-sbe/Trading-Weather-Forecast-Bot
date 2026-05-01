@@ -2,8 +2,8 @@ name: Daily Weather Forecast
 
 on:
   schedule:
-    - cron: "32 16 * * *"   # runs daily at 15:38 UTC
-  workflow_dispatch:        # allows manual runs from the Actions tab
+    - cron: "52 16 * * *"   # runs daily at 15:38 UTC
+  #workflow_dispatch:        # allows manual runs from the Actions tab
 
 jobs:
   post-forecast:
