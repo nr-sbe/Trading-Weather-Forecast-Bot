@@ -3,8 +3,7 @@ name: Daily Weather Forecast
 on:
   schedule:
     - cron: "*/5 * * * *"   # runs daily at 15:38 UTC
-  workflow_dispatch:        # allows manual runs from the Actions tab
-
+    
 jobs:
   post-forecast:
     runs-on: ubuntu-latest
