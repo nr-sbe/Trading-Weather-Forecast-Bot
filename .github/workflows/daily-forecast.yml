@@ -2,7 +2,7 @@ name: Daily Weather Forecast
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # runs daily at 15:38 UTC
+    - cron: "7 13 * * *"   #
     
 jobs:
   post-forecast:
